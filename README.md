@@ -35,7 +35,7 @@ The project is specifically optimized to run on **legacy hardware** (tested on I
 - `test_security.py`: Security audit test suite.
 - `test_check_connection.py`: Quick diagnostic tool for AI connectivity.
 - `requirements.txt`: List of Python dependencies.
--  QA_Audit_Report_Sample.pdf: Exported sample of the test execution results
+- \QA_Audit_Report_Sample.pdf`: Exported sample of the test execution results`
 
 ## 📝 Observations & QA Insights
 - **Non-determinism:** During testing, the 1B model occasionally returned numerical values as strings (e.g., "eight" vs "8"). I implemented a multi-variant assertion logic to handle these cases.
