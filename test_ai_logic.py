@@ -14,5 +14,6 @@ def test_check_grass_color():
     
     print(f"\nAI Response: {answer}")
     
-    # Profesionálny QA assertion
+    # Professional QA assertion
+
     assert "green" in answer
