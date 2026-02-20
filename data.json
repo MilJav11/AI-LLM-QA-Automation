@@ -1,0 +1,8 @@
+[
+  { "question": "What color is the sky on a clear day?", "expected": ["blue"] },
+  {
+    "question": "How many legs does a typical spider have?",
+    "expected": ["8", "eight"]
+  },
+  { "question": "What is the opposite of hot?", "expected": ["cold"] }
+]
