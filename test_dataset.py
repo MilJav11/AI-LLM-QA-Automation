@@ -10,7 +10,7 @@ def load_test_data():
 @pytest.mark.parametrize("item", load_test_data())
 def test_ai_facts(item):
     question = item['question']
-    expected_list = item['expected'] # Teraz je to zoznam ["8", "eight"]
+    expected_list = item['expected'] # Now it is a list ["8", "eight"]
     
     start_time = time.time()
     
@@ -19,12 +19,13 @@ def test_ai_facts(item):
     ])
     
     duration = time.time() - start_time
-    # Vyčistíme odpoveď od bodiek a medzier
+    # Clean the response from dots and spaces
     answer = response['message']['content'].lower().strip().replace(".", "")
     
     print(f"\nQ: {question} | A: {answer} ({duration:.2f}s)")
     
-    # Overíme, či ASPOŇ JEDNO z očakávaných slov je v odpovedi
+    # Verify that AT LEAST ONE of the expected words is in the response
     success = any(variant in answer for variant in expected_list)
     
+
     assert success, f"Expected one of {expected_list} but got '{answer}'"
